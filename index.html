@@ -6,41 +6,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Calculator</title>
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.min.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-slate-500">
     <!-- header section starts here -->
     <header>
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl h-[100%]"><img class="w-20 ml-14" src="./images/logo.png" alt="">Geometry Calculator </a>
+        <div class="navbar bg-base-100 flex flex-col justify-between lg:flex-row">
+            <div class="flex justify-center">
+                <a class="btn btn-ghost normal-case text-xl h-[100%]"><img class="w-20 lg:ml-14" src="./images/logo.png"
+                        alt="">Geometry Calculator </a>
             </div>
             <div>
-                <h3 class="text-center mr-14">
+                <h3 class="text-center lg:mr-14">
                     Calculate area of many shapes
                 </h3>
             </div>
-          </div>
+        </div>
     </header>
-    <main>
-        <section class="container">
-            <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Shoes!</h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
-                  <input type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
-                  <input type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                  </div>
-                </div>
-              </div>
+    <main class="flex justify-center  pt-8">
+        <section class="container w-[1200px] grid grid-cols-1 m-4 lg:m-0 lg:grid-cols-3 justify-center gap-4">
 
+            <div class="card card-compact w-full shadow-xl p-2 mainCards">
+                <div class=" flex justify-center">
+                    <img class="w-3/5" src="./images/triangle.png" alt="triangle" />
+                </div>
+                <div class="card-body mt-[-20px]">
+                    <h2 class="text-2xl text-center text-black font-bold">Triangle</h2>
+                    <p class="text-sm text-center pb-2 text-stone-800">Area (A) = 0.5 x b x h</p>
+                    <div class="alert alert-success hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                       <b> The area of your triangle is : <span>120</span></b>
+                      </div>
+
+                    <div class="flex justify-between gap-5">
+                        <div class="flex gap-2 items-center w-full justify-center">
+                            <input type="text" placeholder="b" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                        <div class="flex gap-2 items-center w-full">
+                            <input type="text" placeholder="h" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                    </div>
+                    <div class=" flex justify-center pt-2">
+                        <button class="btn btn-outline btn-accent w-full">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact w-full  shadow-xl  p-2 mainCards">
+                <div class=" flex justify-center">
+                    <img class="w-3/5" src="./images/rectangle.png" alt="triangle" />
+                </div>
+                <div class="card-body mt-[-20px]">
+                    <h2 class="text-2xl text-center text-black font-bold">Rectangle</h2>
+                    <p class="text-sm text-center pb-2 text-stone-800">Area (A) = w x l</p>
+                    <div class="alert alert-success hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                       <b> The area of your triangle is : <span>120</span></b>
+                      </div>
+                    <div class="flex justify-between gap-5">
+                        <div class="flex gap-2 items-center w-full justify-center">
+                            <input type="text" placeholder="w" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                        <div class="flex gap-2 items-center w-full">
+                            <input type="text" placeholder="l" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                    </div>
+                    <div class=" flex justify-center pt-2">
+                        <button class="btn btn-outline btn-accent w-full">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact w-full shadow-xl  p-2 mainCards">
+                <div class=" flex justify-center">
+                    <img class="w-3/5" src="./images/parallelogram.png" alt="triangle" />
+                </div>
+                <div class="card-body mt-[-20px]">
+                    <h2 class="text-2xl text-center text-black font-bold">Parallelogram</h2>
+                    <p class="text-sm text-center pb-2 text-stone-800">Area (A) = b x h</p>
+                    <div class="alert alert-success hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                       <b> The area of your triangle is : <span>120</span></b>
+                      </div>
+                    <div class="flex justify-between gap-5">
+                        <div class="flex gap-2 items-center w-full justify-center">
+                            <input type="text" placeholder="b" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                        <div class="flex gap-2 items-center w-full">
+                            <input type="text" placeholder="h" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                    </div>
+                    <div class=" flex justify-center pt-2">
+                        <button class="btn btn-outline btn-accent w-full">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact w-full shadow-xl  p-2 mainCards">
+                <div class=" flex justify-center">
+                    <img class="w-3/5" src="./images/rhombus.png" alt="triangle" />
+                </div>
+                <div class="card-body mt-[-20px]">
+                    <h2 class="text-2xl text-center text-black font-bold">Rhombus</h2>
+                    <p class="text-sm text-center pb-2 text-stone-800">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                    <div class="alert alert-success hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                       <b> The area of your triangle is : <span>120</span></b>
+                      </div>
+                    <div class="flex justify-between gap-5">
+                        <div class="flex gap-2 items-center w-full justify-center">
+                            <input type="text" placeholder="w" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                        <div class="flex gap-2 items-center w-full">
+                            <input type="text" placeholder="d1" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                    </div>
+                    <div class=" flex justify-center pt-2">
+                        <button class="btn btn-outline btn-accent w-full">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact w-full shadow-xl  p-2 mainCards">
+                <div class=" flex justify-center">
+                    <img class="w-3/5" src="./images/pentagon.png" alt="triangle" />
+                </div>
+                <div class="card-body mt-[-20px]">
+                    <h2 class="text-2xl text-center text-black font-bold">Pentagon</h2>
+                    <p class="text-sm text-center pb-2 text-stone-800">Area (A) = 0.5 x p x b</p>
+                    <div class="alert alert-success hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                       <b> The area of your triangle is : <span>120</span></b>
+                      </div>
+                    <div class="flex justify-between gap-5">
+                        <div class="flex gap-2 items-center w-full justify-center">
+                            <input type="text" placeholder="p" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                        <div class="flex gap-2 items-center w-full">
+                            <input type="text" placeholder="b" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                    </div>
+                    <div class=" flex justify-center pt-2">
+                        <button class="btn btn-outline btn-accent w-full">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact w-full shadow-xl  p-2 mainCards">
+                <div class=" flex justify-center">
+                    <img class="w-3/5" src="./images/ellipse.png" alt="triangle" />
+                </div>
+                <div class="card-body mt-[-20px]">
+                    <h2 class="text-2xl text-center text-black font-bold">Ellipse</h2>
+                    <p class="text-sm text-center pb-2 text-stone-800">Area (A) = πab</p>
+                    <div class="alert alert-success hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                       <b> The area of your triangle is : <span>120</span></b>
+                      </div>
+                    <div class="flex justify-between gap-5">
+                        <div class="flex gap-2 items-center w-full justify-center">
+                            <input type="text" placeholder="a" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                        <div class="flex gap-2 items-center w-full">
+                            <input type="text" placeholder="b" class="input input-bordered input-success w-2/3 max-w-xs text-center" /> <b class="text-gray-700 text-lg">cm</b>
+                        </div>
+                    </div>
+                    <div class=" flex justify-center pt-2">
+                        <button class="btn btn-outline btn-accent w-full">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </main>
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-10">
+        <div>
+          <p>Copyright © 2023 - All right reserved by Md Jahid Hasan</p>
+        </div>
+      </footer>
 </body>
 
 </html>

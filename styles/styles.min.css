@@ -1,0 +1,7 @@
+.mainCards{
+    box-shadow: 2px 2px 4px rgb(246, 246, 248);
+    background-color: rgba(116, 70, 70, 0.315)!important;
+}
+.mainCards:hover{
+    background-color: rgba(139, 35, 9, 0.568)!important;
+}
