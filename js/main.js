@@ -11,13 +11,13 @@ targetButton.addEventListener('click', function (events) {
     let shapeId = events.target.parentElement.parentElement.children[0].id
     let total;
     if (shapeId === 'shapeTittleEllipse') {
-        total = Math.PI * firstInputValue * secondInputValue
+        total = (Math.PI * firstInputValue * secondInputValue).toFixed(2)
 
     }
     if (shapeId === 'shapeTittleRhombus' || shapeId === 'shapeTittlePentagon') {
-        total = 0.5 * firstInputValue * secondInputValue
+        total = (0.5 * firstInputValue * secondInputValue).toFixed(2)
     } else {
-        total = firstInputValue * secondInputValue
+        total = (firstInputValue * secondInputValue).toFixed(2)
     }
     if (isNaN(total) || secondInputValue < 0 || firstInputValue < 0) {
         return alert('please provide positive number on both input')
